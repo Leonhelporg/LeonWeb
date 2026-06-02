@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Leon Web 案例：扫描系统页面，展示流程入口与状态说明。">
+    <title>扫描系统页面 - Leon Web 案例</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a href="index.html" class="brand"><span class="brand-dot"></span><span>Leon Web</span></a>
+            <nav class="nav"><a href="index.html">首页</a><a href="index.html#services">服务</a><a href="xiangmu.html" class="active">案例</a><a href="yonghutiaok.html">条款</a><a href="index.html#contact">联系</a></nav>
+        </div>
+    </header>
+    <main class="wrap">
+        <section class="hero-personal">
+            <div class="hero-main">
+                <p class="kicker">Case Detail</p>
+                <h1>扫描系统页面</h1>
+                <p class="lead">该项目用于展示扫描流程、示例视频、步骤说明和异常处理提示。当前版本已恢复项目内容，并统一为官网 UI。</p>
+                <div class="hero-actions"><a class="btn btn-primary" href="#demo">查看演示</a><a class="btn btn-ghost" href="xiangmu.html">返回案例目录</a><a class="btn btn-ghost" href="index.html#contact">联系咨询</a></div>
+            </div>
+            <aside class="profile-card"><p class="profile-title">项目状态</p><p>维护中。保留演示视频与流程说明。</p><div class="tag-row"><span>工具页面</span><span>流程展示</span><span>视频演示</span></div></aside>
+        </section>
+
+        <section class="section tool-panel" id="demo">
+            <p class="section-label">Demo</p>
+            <h2>扫描演示</h2>
+            <video controls preload="metadata">
+                <source src="scan_demo.mp4" type="video/mp4">
+                当前浏览器不支持视频播放，请确认 `scan_demo.mp4` 是否存在。
+            </video>
+        </section>
+
+        <section class="section section-shell">
+            <div class="section-head"><div><p class="section-label">Workflow</p><h2>流程说明</h2></div></div>
+            <div class="project-grid">
+                <article class="project-card"><div class="project-top"><h3>1. 准备内容</h3><span class="state">Step</span></div><p>确认待扫描内容、格式和提交入口，减少无效操作。</p></article>
+                <article class="project-card"><div class="project-top"><h3>2. 开始扫描</h3><span class="state">Step</span></div><p>按页面提示进入扫描流程，等待系统返回处理状态。</p></article>
+                <article class="project-card"><div class="project-top"><h3>3. 查看结果</h3><span class="state">Step</span></div><p>根据结果提示判断是否需要重新提交或联系维护人员。</p></article>
+                <article class="project-card"><div class="project-top"><h3>4. 异常处理</h3><span class="state">Support</span></div><p>如遇加载失败、文件缺失或无法播放，请通过联系方式反馈。</p></article>
+            </div>
+        </section>
+    </main>
+    <script src="site.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Leon Web 案例：排队状态页面，展示流程节点和用户状态信息。">
+    <title>排队状态页面 - Leon Web 案例</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="site-header"><div class="wrap header-inner"><a href="index.html" class="brand"><span class="brand-dot"></span><span>Leon Web</span></a><nav class="nav"><a href="index.html">首页</a><a href="index.html#services">服务</a><a href="xiangmu.html" class="active">案例</a><a href="yonghutiaok.html">条款</a><a href="index.html#contact">联系</a></nav></div></header>
+    <main class="wrap">
+        <section class="hero-personal"><div class="hero-main"><p class="kicker">Case Detail</p><h1>排队状态页面</h1><p class="lead">用于展示用户排队状态、流程节点和提示信息，目标是降低等待过程中的沟通成本。</p><div class="hero-actions"><a class="btn btn-primary" href="#queue">查看状态</a><a class="btn btn-ghost" href="xiangmu.html">返回案例目录</a><a class="btn btn-ghost" href="index.html#contact">联系咨询</a></div></div><aside class="profile-card"><p class="profile-title">项目状态</p><p>维护中。已恢复状态展示内容。</p><div class="tag-row"><span>状态展示</span><span>业务页面</span><span>维护中</span></div></aside></section>
+
+        <section class="section tool-panel" id="queue">
+            <p class="section-label">Queue Status</p>
+            <h2>当前排队流程</h2>
+            <div class="status-board">
+                <div class="queue-row"><strong>提交订单</strong><div class="progress-track"><div class="progress-fill" style="width:100%"></div></div><span>已完成</span></div>
+                <div class="queue-row"><strong>等待处理</strong><div class="progress-track"><div class="progress-fill" style="width:70%"></div></div><span>处理中</span></div>
+                <div class="queue-row"><strong>人工确认</strong><div class="progress-track"><div class="progress-fill" style="width:35%"></div></div><span>排队中</span></div>
+                <div class="queue-row"><strong>完成通知</strong><div class="progress-track"><div class="progress-fill" style="width:0%"></div></div><span>未开始</span></div>
+            </div>
+            <div class="notice-box" style="margin-top:12px;">提示：该页面为状态展示示例，实际进度以工作人员通过 WhatsApp / Telegram 通知为准。</div>
+        </section>
+    </main>
+    <script src="site.js"></script>
+</body>
+</html>
+
+

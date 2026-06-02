@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Leon Web 历史实验：PUBGM Invest 页面。">
+    <title>PUBGM Invest - Leon Web 实验项目</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="site-header"><div class="wrap header-inner"><a href="index.html" class="brand"><span class="brand-dot"></span><span>Leon Web</span></a><nav class="nav"><a href="index.html">首页</a><a href="xiangmu.html" class="active">案例</a><a href="yonghutiaok.html">条款</a><a href="index.html#contact">联系</a></nav></div></header>
+    <main class="wrap">
+        <section class="hero-personal">
+            <div class="hero-main">
+                <p class="kicker">Experiment</p>
+                <h1>PUBGM Invest</h1>
+                <p class="lead">该页面为历史实验项目，保留数据展示与搜索功能，并统一切换到官网 UI。</p>
+                <div class="hero-actions"><a class="btn btn-primary" href="xiangmu.html">返回案例目录</a></div>
+            </div>
+            <aside class="profile-card"><p class="profile-title">项目状态</p><p>实验归档，保留功能演示。</p></aside>
+        </section>
+
+        <section class="section tool-panel">
+            <p class="section-label">Search</p>
+            <h2>投资编号检索</h2>
+            <div class="search-bar"><input type="text" id="searchInput" placeholder="根据投资编号搜索枪械，例如 W001"></div>
+        </section>
+
+        <section class="section tool-panel">
+            <p class="section-label">Weapons</p>
+            <h2>枪械投资</h2>
+            <div id="weaponContainer" class="card-container"></div>
+        </section>
+
+        <section class="section tool-panel">
+            <p class="section-label">Items</p>
+            <h2>变卖物投资</h2>
+            <div id="itemContainer" class="card-container"></div>
+        </section>
+    </main>
+
+    <script src="pubgminvest.js"></script>
+    <script src="site.js"></script>
+</body>
+</html>
+
+

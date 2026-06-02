@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Leon Web 工具页面：建议反馈系统。">
+    <title>建议反馈系统 - Leon Web 工具页</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="site-header"><div class="wrap header-inner"><a href="index.html" class="brand"><span class="brand-dot"></span><span>Leon Web</span></a><nav class="nav"><a href="index.html">首页</a><a href="xiangmu.html" class="active">案例</a><a href="yonghutiaok.html">条款</a><a href="index.html#contact">联系</a></nav></div></header>
+    <main class="wrap">
+        <section class="hero-personal">
+            <div class="hero-main">
+                <p class="kicker">Tool Page</p>
+                <h1>建议反馈系统</h1>
+                <p class="lead">用于收集建议和反馈的工具页面，当前保留提交功能并统一为官网 UI。</p>
+                <div class="hero-actions"><a class="btn btn-primary" href="xiangmu.html">返回案例目录</a><a class="btn btn-ghost" href="mailto:leonhelp999.org@gmail.com">发送邮件反馈</a></div>
+            </div>
+            <aside class="profile-card"><p class="profile-title">反馈渠道</p><p>WhatsApp / Telegram / Email 均可提交反馈。</p><div class="tag-row"><span>工具页</span><span>反馈收集</span><span>维护中</span></div></aside>
+        </section>
+
+        <section class="section tool-panel">
+            <p class="section-label">Submit Feedback</p>
+            <h2>提交建议</h2>
+            <form id="suggestionForm">
+                <textarea id="suggestion" placeholder="请输入您的建议..." required></textarea>
+                <button type="submit" class="btn btn-primary">提交</button>
+            </form>
+            <div class="response" id="response" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('suggestionForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            var responseDiv = document.getElementById('response');
+            var suggestion = document.getElementById('suggestion').value;
+
+            responseDiv.textContent = '正在提交...';
+
+            try {
+                var response = await fetch('https://morning-snow-5502.leonhelp999-org.workers.dev/submit-suggestion', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ suggestion: suggestion })
+                });
+                var data = await response.json();
+                responseDiv.textContent = data.message || '提交成功';
+            } catch (error) {
+                responseDiv.textContent = '提交失败: ' + error;
+            }
+        });
+    </script>
+    <script src="site.js"></script>
+</body>
+</html>
+
+

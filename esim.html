@@ -1,0 +1,152 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Leon Web ESIM 报价整合，可筛选卡区、产品类型、地区、价格并打印保存 PDF。">
+  <title>ESIM 报价整合 - Leon Web</title>
+  <link rel="stylesheet" href="esim.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="index.html" class="brand"><span class="brand-dot"></span><span>Leon Web</span></a>
+      <nav class="nav"><a href="index.html">首页</a><a href="xiangmu.html" class="active">案例</a><a href="yonghutiaok.html">条款</a><a href="index.html#contact">联系</a></nav>
+    </div>
+  </header>
+
+  <main class="wrap quote-page">
+    <section class="hero-personal">
+      <div class="hero-main">
+        <p class="kicker">ESIM Quotation</p>
+        <h1>ESIM 报价整合与可用地区综合。</h1>
+        <p class="lead">本报价单整合爱沙尼亚、香港、日本、美国、英国卡区 ESIM 产品，支持号码、套餐、仅流量与储值/漫游项目筛选，便于销售报价、客户确认和打印归档。</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#quotes">查看报价</a><button class="btn btn-ghost" type="button" onclick="window.print()">打印 / 保存 PDF</button><a class="btn btn-ghost" href="index.html#contact">联系确认</a></div>
+      </div>
+      <aside class="profile-card quote-meta">
+        <div class="meta-row"><span>报价日期</span><span id="quoteDate">-</span></div>
+        <div class="meta-row"><span>报价币种</span><span>EUR / USD / RMB</span></div>
+        <div class="meta-row"><span>适用产品</span><span>ESIM 号码 / 流量 / 储值</span></div>
+        <div class="meta-row"><span>汇率</span><span>1 USD=6.88 RMB；1 EUR=7.88 RMB</span></div>
+        <div class="meta-row"><span>Tether</span><span>1 RMB=0.14798 USDT；1 USDT=6.757 RMB</span></div>
+        <div class="meta-row"><span>Telegram</span><span><a href="https://t.me/+37253202841" target="_blank" rel="noopener noreferrer">+372 5320 2841</a></span></div>
+        <div class="meta-row"><span>WhatsApp</span><span><a href="https://wa.me/85284127725" target="_blank" rel="noopener noreferrer">+852 84127725</a></span></div>
+        <div class="meta-row"><span>备注</span><span>价格浮动，定制请私信确认</span></div>
+      </aside>
+    </section>
+
+    <section class="section-shell toolbar" aria-label="筛选工具">
+      <div class="filters">
+        <select class="quote-select" id="cardFilter" aria-label="按卡区筛选">
+          <option value="all">全部卡区</option><option value="爱沙尼亚卡区">爱沙尼亚卡区</option><option value="香港卡区">香港卡区</option><option value="日本卡区">日本卡区</option><option value="美国卡区">美国卡区</option><option value="英国卡区">英国卡区</option>
+        </select>
+        <select class="quote-select" id="typeFilter" aria-label="按产品类型筛选">
+          <option value="all">全部类型</option><option value="号码">号码</option><option value="套餐+号码">套餐+号码</option><option value="仅流量">仅流量</option><option value="储值/漫游">储值/漫游</option>
+        </select>
+        <input class="quote-input" id="searchInput" type="search" placeholder="搜索卡区、区域、套餐、价格">
+      </div>
+      <div class="filters"><button class="btn btn-ghost" id="resetBtn" type="button">重置筛选</button><button class="btn btn-primary" type="button" onclick="window.print()">打印 / 保存 PDF</button></div>
+    </section>
+
+    <section class="stats" aria-label="报价概览">
+      <div class="project-card stat"><strong>5</strong><span>卡区报价整合</span></div>
+      <div class="project-card stat"><strong>21</strong><span>报价项目</span></div>
+      <div class="project-card stat"><strong>¥37.04</strong><span>大陆漫游 / GB</span></div>
+      <div class="project-card stat"><strong>号码/流量</strong><span>支持单独或组合购买</span></div>
+    </section>
+
+    <section class="section section-shell" id="quotes">
+      <div class="section-head"><div><p class="section-label">Quote Table</p><h2>报价明细</h2><p class="hint">可通过卡区、产品类型或关键词快速筛选；人民币按 1 USD=6.88 RMB、1 EUR=7.88 RMB 折算。</p></div><div class="hint" id="resultCount">共 21 个项目</div></div>
+      <p class="table-hint">移动端可左右滑动查看完整报价表。</p>
+      <div class="table-wrap"><table class="quote-table"><thead><tr><th>卡区</th><th>产品类型</th><th>区域 / 限制</th><th>套餐内容</th><th>有效期</th><th>价格</th><th>备注</th></tr></thead><tbody id="quoteTable"></tbody></table><div class="empty" id="emptyState">没有找到匹配的项目，请调整筛选条件。</div></div>
+    </section>
+
+    <section class="section section-shell">
+      <div class="section-head"><div><p class="section-label">Regions</p><h2>地区与限制综合</h2><p class="hint">爱沙尼亚卡区在以下国家/地区不可以拨打电话；仅流量区域支持按国家与 IP 定制。</p></div></div>
+      <div class="regions">
+        <article class="region-card"><h3>爱沙尼亚卡区：亚洲不可拨打电话</h3><p>不可以拨打电话的国家/地区：</p><div class="region-list"><span class="quote-tag orange">柬埔寨</span><span class="quote-tag orange">中国</span><span class="quote-tag orange">日本</span><span class="quote-tag orange">澳门</span><span class="quote-tag orange">新加坡</span><span class="quote-tag orange">台湾</span></div></article>
+        <article class="region-card"><h3>爱沙尼亚卡区：欧洲不可拨打电话</h3><p>不可以拨打电话的国家：</p><div class="region-list"><span class="quote-tag orange">冰岛</span><span class="quote-tag orange">瑞士</span></div></article>
+        <article class="region-card"><h3>爱沙尼亚卡区：美洲不可拨打电话</h3><p>不可以拨打电话的国家/地区：</p><div class="region-list"><span class="quote-tag orange">荷属圣马丁</span><span class="quote-tag orange">波多黎各</span><span class="quote-tag orange">美国</span></div></article>
+        <article class="region-card"><h3>爱沙尼亚卡区：大洋洲不可拨打电话</h3><p>不可以拨打电话的国家：</p><div class="region-list"><span class="quote-tag orange">澳大利亚</span></div></article>
+        <article class="region-card"><h3>仅流量可用区域</h3><p>可按流量大小、国家和 IP 定制。</p><div class="region-list"><span class="quote-tag">HK IP 中国大陆 中国移动</span><span class="quote-tag">SG IP 中国大陆 中国联通</span><span class="quote-tag">特殊区域可定制</span></div></article>
+        <article class="region-card"><h3>香港卡区能力</h3><p>SMS+数据套餐不可通话、不可发送短信；仅流量支持 HK IP、SG IP 与特殊区域定制。</p><div class="region-list"><span class="quote-tag">SMS+数据</span><span class="quote-tag">仅流量</span><span class="quote-tag orange">不可通话</span><span class="quote-tag orange">不可发送短信</span></div></article>
+        <article class="region-card"><h3>日本卡区能力</h3><p>日本 IP 流量套餐单独归入日本卡区。</p><div class="region-list"><span class="quote-tag">JP IP</span><span class="quote-tag">30GB / 50GB</span><span class="quote-tag">180 天</span></div></article>
+        <article class="region-card"><h3>美国卡区能力</h3><p>美国 IP 流量套餐与美国号码单独归入美国卡区；美国号码为 SMS only。</p><div class="region-list"><span class="quote-tag">US IP</span><span class="quote-tag">美国号码</span><span class="quote-tag">SMS only</span><span class="quote-tag">180 天 / 半年版</span></div></article>
+        <article class="region-card"><h3>英国卡区能力</h3><p>英国 +44 号码单独归入英国卡区。</p><div class="region-list"><span class="quote-tag">英国 +44 号码</span><span class="quote-tag">SMS only</span><span class="quote-tag">180 天</span></div></article>
+      </div>
+    </section>
+
+    <section class="section section-shell">
+      <div class="section-head"><div><p class="section-label">Notes</p><h2>报价说明</h2><p class="hint">以下说明可随 PDF 一并发送给客户。</p></div></div>
+      <div class="note-grid">
+        <div class="note"><strong>爱沙尼亚卡区产品</strong><p>支持仅号码、套餐+号码、仅流量三种购买方式。号码起始为 150，可选择普通号或靓号；流量区域、流量大小、国家和 IP 可定制。</p></div>
+        <div class="note"><strong>靓号说明</strong><p>可选 888、999、666、520、521、生日号。8888、9999、6666 可能无货，下单前需确认库存。</p></div>
+        <div class="note"><strong>储值与汇率</strong><p>当前页面按 1 EUR=7.88 RMB、1 USD=6.88 RMB 折算；实际结算可按双方确认汇率执行。</p></div>
+        <div class="note"><strong>定制需求</strong><p>流量大小、使用国家、出口 IP 与特殊区域可定制，需私信确认目的地、有效期、流量大小和预算后报价。</p></div>
+        <div class="note"><strong>联系方式</strong><p>Telegram：+372 5320 2841；WhatsApp：+852 84127725；Email：leonhelp999.org@gmail.com。</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="wrap footer-inner"><span>&copy; 2025 Leon Web · ESIM Quote</span><div class="footer-links"><a href="index.html">首页</a><a href="xiangmu.html">案例</a><a href="yonghutiaok.html">条款</a></div></div></footer>
+
+  <script>
+    const quotes = [
+      { card: "爱沙尼亚卡区", type: "号码", area: "购买方式", content: "仅号码 / 套餐+号码 / 仅流量；号码起始 150", duration: "按产品", price: "按所选产品确认", note: "号码和流量均为可选项，可单独购买，也可组合购买" },
+      { card: "爱沙尼亚卡区", type: "号码", area: "靓号可选", content: "号码起始 150；可选 888/999/666/520/521/生日号", duration: "长期", price: "按号码确认", note: "888/999/666 族价格浮动，部分号码可能无货" },
+      { card: "爱沙尼亚卡区", type: "号码", area: "888 族", content: "888：30 USD；8888：180 USD", duration: "按号码", price: "30-180 USD（约 206.40-1238.40 RMB）", note: "浮动价格，有时无货" },
+      { card: "爱沙尼亚卡区", type: "号码", area: "999 族", content: "999：60 USD；9999：180 USD", duration: "按号码", price: "60-180 USD（约 412.80-1238.40 RMB）", note: "浮动价格，有时无货" },
+      { card: "爱沙尼亚卡区", type: "号码", area: "666 族", content: "666：20 USD；6666：180 USD", duration: "按号码", price: "20-180 USD（约 137.60-1238.40 RMB）", note: "浮动价格，有时无货" },
+      { card: "爱沙尼亚卡区", type: "套餐+号码", area: "附加套餐", content: "25GB", duration: "356 天", price: "50 EUR（约 394.00 RMB）", note: "套餐为附加项，不建议购买" },
+      { card: "爱沙尼亚卡区", type: "仅流量", area: "HK IP / 中国大陆 / 中国移动", content: "50GB", duration: "30 天", price: "45.99 EUR（约 362.40 RMB）", note: "流量大小、国家和 IP 可定制" },
+      { card: "爱沙尼亚卡区", type: "仅流量", area: "HK IP / 中国大陆 / 中国移动", content: "50GB", duration: "180 天", price: "49.99 EUR（约 393.92 RMB）", note: "流量大小、国家和 IP 可定制" },
+      { card: "爱沙尼亚卡区", type: "仅流量", area: "SG IP / 中国大陆 / 中国联通", content: "50GB", duration: "30 天", price: "54.4 EUR（约 428.67 RMB）", note: "流量大小、国家和 IP 可定制" },
+      { card: "爱沙尼亚卡区", type: "储值/漫游", area: "中国大陆漫游", content: "无流量套餐时按量计费；短信 0.24 EUR/条（约 1.89 RMB/条）", duration: "按使用量", price: "4.7 EUR/GB（约 37.04 RMB/GB）", note: "储值区域与欧元-人民币汇率绑定" },
+      { card: "香港卡区", type: "套餐+号码", area: "SMS+数据", content: "20GB；不可通话/不可发送短信", duration: "365 天", price: "220 RMB", note: "适合长期保号和数据使用" },
+      { card: "香港卡区", type: "套餐+号码", area: "SMS+数据", content: "20GB；不可通话/不可发送短信", duration: "180 天", price: "190 RMB", note: "不建议购买" },
+      { card: "香港卡区", type: "仅流量", area: "HK IP", content: "100GB", duration: "30 天", price: "30 USD（约 206.40 RMB）", note: "特殊区域可定制" },
+      { card: "香港卡区", type: "仅流量", area: "HK IP", content: "15GB", duration: "30 天", price: "11.8 USD（约 81.18 RMB）", note: "特殊区域可定制" },
+      { card: "香港卡区", type: "仅流量", area: "SG IP", content: "50GB", duration: "180 天", price: "47.9 USD（约 329.55 RMB）", note: "新加坡 IP 流量套餐" },
+      { card: "香港卡区", type: "仅流量", area: "SG IP", content: "100GB", duration: "90 天", price: "75.8 USD（约 521.50 RMB）", note: "新加坡 IP 流量套餐" },
+      { card: "日本卡区", type: "仅流量", area: "JP IP", content: "30GB", duration: "180 天", price: "35.8 USD（约 246.30 RMB）", note: "日本 IP 流量套餐" },
+      { card: "日本卡区", type: "仅流量", area: "JP IP", content: "50GB", duration: "180 天", price: "45.8 USD（约 315.10 RMB）", note: "日本 IP 流量套餐" },
+      { card: "美国卡区", type: "仅流量", area: "US IP", content: "50GB", duration: "180 天", price: "45.8 USD（约 315.10 RMB）", note: "美国 IP 流量套餐" },
+      { card: "英国卡区", type: "号码", area: "英国 +44 号码", content: "SMS only", duration: "180 天", price: "25.8 USD（约 177.50 RMB）", note: "仅短信号码" },
+      { card: "美国卡区", type: "号码", area: "美国号码", content: "SMS only；半年版", duration: "180 天", price: "55.8 USD（约 383.90 RMB）", note: "美国号码仅短信，不支持语音通话" }
+    ];
+
+    const quoteTable = document.querySelector("#quoteTable");
+    const cardFilter = document.querySelector("#cardFilter");
+    const typeFilter = document.querySelector("#typeFilter");
+    const searchInput = document.querySelector("#searchInput");
+    const resetBtn = document.querySelector("#resetBtn");
+    const resultCount = document.querySelector("#resultCount");
+    const emptyState = document.querySelector("#emptyState");
+
+    document.querySelector("#quoteDate").textContent = new Date().toLocaleDateString("zh-CN");
+
+    function renderQuotes() {
+      const card = cardFilter.value;
+      const type = typeFilter.value;
+      const keyword = searchInput.value.trim().toLowerCase();
+      const filtered = quotes.filter((item) => {
+        const cardMatch = card === "all" || item.card === card;
+        const typeMatch = type === "all" || item.type === type;
+        const keywordMatch = !keyword || [item.card, item.type, item.area, item.content, item.duration, item.price, item.note].join(" ").toLowerCase().includes(keyword);
+        return cardMatch && typeMatch && keywordMatch;
+      });
+      quoteTable.innerHTML = filtered.map((item) => `<tr><td><strong>${item.card}</strong></td><td><span class="quote-tag">${item.type}</span></td><td>${item.area}</td><td>${item.content}</td><td>${item.duration}</td><td class="price">${item.price}</td><td>${item.note}</td></tr>`).join("");
+      resultCount.textContent = `共 ${filtered.length} 个项目`;
+      emptyState.style.display = filtered.length ? "none" : "block";
+    }
+    cardFilter.addEventListener("change", renderQuotes);
+    typeFilter.addEventListener("change", renderQuotes);
+    searchInput.addEventListener("input", renderQuotes);
+    resetBtn.addEventListener("click", () => { cardFilter.value = "all"; typeFilter.value = "all"; searchInput.value = ""; renderQuotes(); });
+    renderQuotes();
+  </script>
+    <script src="site.js"></script>
+</body>
+</html>
+
+
