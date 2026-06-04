@@ -1,0 +1,611 @@
+mixed-port: 7890
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: info
+external-controller: '127.0.0.1:9090'
+dns:
+    enable: true
+    ipv6: false
+    enhanced-mode: fake-ip
+    fake-ip-range: 198.18.0.1/16
+    use-hosts: true
+    default-nameserver: [223.5.5.5, 119.29.29.29]
+    nameserver: ['https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query']
+    fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
+proxies:
+    - { name: '剩余流量：128 GB', type: anytls, server: hk01a.t11-a.app, port: 35355, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 套餐到期：2026-07-04, type: anytls, server: hk01a.t11-a.app, port: 35355, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇭🇰[HK]01', type: anytls, server: hk01a.t11-a.app, port: 35355, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇭🇰[HK]02', type: anytls, server: hk02a.t11-a.app, port: 35356, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇭🇰[HK]03', type: anytls, server: hk03a.t11-a.app, port: 35357, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇭🇰[HK]04', type: anytls, server: hk04a.t11-a.app, port: 35358, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇭🇰[HK]05', type: anytls, server: hk05a.t11-a.app, port: 35359, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇭🇰[HK]06', type: anytls, server: hk06a.t11-a.app, port: 35360, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇭🇰[HK]07', type: anytls, server: hk07a.t11-a.app, port: 35361, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇭🇰[HK]08', type: anytls, server: hk08a.t11-a.app, port: 35362, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇭🇰[HK]09', type: anytls, server: hk09a.t11-a.app, port: 35363, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇭🇰[HK]10', type: anytls, server: hk10a.t11-a.app, port: 35365, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇭🇰[HK]11', type: anytls, server: hk11a.t11-a.app, port: 35366, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇭🇰[HK]12', type: anytls, server: hk12a.t11-a.app, port: 35367, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇭🇰[HK]13', type: anytls, server: hk13a.t11-a.app, port: 35368, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇭🇰[HK]14', type: anytls, server: hk14a.t11-a.app, port: 35369, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇭🇰[HK]15', type: anytls, server: hk15a.t11-a.app, port: 35370, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇭🇰[HK]16', type: anytls, server: hk16a.t11-a.app, port: 35371, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇭🇰[HK]17', type: anytls, server: hk17a.t11-a.app, port: 35372, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇭🇰[HK]18', type: anytls, server: hk18a.t11-a.app, port: 35373, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇭🇰[HK]19', type: anytls, server: hk19a.t11-a.app, port: 35375, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇭🇰[HK]20', type: anytls, server: hk20a.t11-a.app, port: 35376, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇸🇬[SG]01', type: anytls, server: sg01a.t202511-n.icu, port: 27521, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇸🇬[SG]02', type: anytls, server: sg02a.t202511-n.icu, port: 27522, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇸🇬[SG]03', type: anytls, server: sg03a.t202511-n.icu, port: 27523, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇸🇬[SG]04', type: anytls, server: sg04a.t11-a.app, port: 27524, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇸🇬[SG]05', type: anytls, server: sg05a.t11-a.app, port: 27525, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇸🇬[SG]06', type: anytls, server: sg06a.t202511-n.icu, port: 27526, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇸🇬[SG]07', type: anytls, server: sg07a.t202511-n.icu, port: 27527, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇸🇬[SG]08', type: anytls, server: sg08a.t11-a.app, port: 27528, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇸🇬[SG]09', type: anytls, server: sg09a.t11-a.app, port: 27529, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇸🇬[SG]10', type: anytls, server: sg10a.t11-a.app, port: 27530, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇸🇬[SG]11', type: anytls, server: sg11a.t11-a.app, port: 27531, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇸🇬[SG]12', type: anytls, server: sg12a.t11-a.app, port: 27532, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇸🇬[SG]13', type: anytls, server: sg13a.t11-a.app, port: 27533, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇸🇬[SG]14', type: anytls, server: sg14a.t11-a.app, port: 27534, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇸🇬[SG]15', type: anytls, server: sg15a.t11-a.app, port: 27535, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇯🇵[JP]01', type: anytls, server: jp01a.t11-a.app, port: 35551, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇯🇵[JP]02', type: anytls, server: jp02a.t11-a.app, port: 35552, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇯🇵[JP]03', type: anytls, server: jp03a.t202511-n.icu, port: 35553, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇯🇵[JP]04', type: anytls, server: jp04a.t202511-n.icu, port: 35554, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇯🇵[JP]05', type: anytls, server: jp05a.t202511-n.icu, port: 35555, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇯🇵[JP]06', type: anytls, server: jp06a.t202511-n.icu, port: 35556, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇯🇵[JP]07', type: anytls, server: jp07a.t11-a.app, port: 35557, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇯🇵[JP]08', type: anytls, server: jp08a.t11-a.app, port: 35558, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇯🇵[JP]09', type: anytls, server: jp09a.t11-a.app, port: 35559, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇯🇵[JP]10', type: anytls, server: jp10a.t11-a.app, port: 35561, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇺🇸[US]01', type: anytls, server: us01a.t11-a.app, port: 35660, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇺🇸[US]02', type: anytls, server: us02a.t202511-n.icu, port: 35661, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇺🇸[US]03', type: anytls, server: us03a.t202511-n.icu, port: 35663, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇺🇸[US]04', type: anytls, server: us04a.t11-a.app, port: 35665, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇺🇸[US]05', type: anytls, server: us05a.t11-a.app, port: 35666, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇺🇸[US]06', type: anytls, server: us06a.t11-a.app, port: 35667, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇺🇸[US]07', type: anytls, server: us07a.t11-a.app, port: 35668, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇺🇸[US]08', type: anytls, server: us08a.t11-a.app, port: 35669, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇺🇸[US]09', type: anytls, server: us09a.t11-a.app, port: 35675, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇺🇸[US]10', type: anytls, server: us10a.t11-a.app, port: 35671, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇺🇸[US]11', type: anytls, server: us11a.t11-a.app, port: 35677, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇺🇸[US]12', type: anytls, server: us12a.t11-a.app, port: 35673, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇹🇼[TW]01', type: anytls, server: tw01a.t11-a.app, port: 33801, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇹🇼[TW]02', type: anytls, server: tw02a.t11-a.app, port: 33802, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇹🇼[TW]03', type: anytls, server: tw03a.t11-a.app, port: 33803, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇹🇼[TW]04', type: anytls, server: tw04a.t11-a.app, port: 33804, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇹🇼[TW]05', type: anytls, server: tw05a.t11-a.app, port: 33805, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇹🇼[TW]06', type: anytls, server: tw06a.t11-a.app, port: 33806, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇫🇷[FR]01', type: anytls, server: fr01a.t202511-n.icu, port: 35801, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇫🇷[FR]02', type: anytls, server: fr02a.t202511-n.icu, port: 35802, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇬🇧[UK]01', type: anytls, server: uk01a.t11-a.app, port: 35803, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇬🇧[UK]02', type: anytls, server: uk02a.t11-a.app, port: 35804, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇩🇪[DE]01', type: anytls, server: de01a.t11-a.app, port: 35805, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇩🇪[DE]02', type: anytls, server: de02a.t11-a.app, port: 35806, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇰🇷[KR]01', type: anytls, server: kr01a.t11-a.app, port: 35807, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇨🇦[CA]01', type: anytls, server: ca01a.t11-a.app, port: 35808, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇳🇱[NL]01', type: anytls, server: nl01a.t11-a.app, port: 35809, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇷🇺[RU]01', type: anytls, server: ru01a.t202511-n.icu, port: 35810, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇮🇳[IN]01', type: anytls, server: in01a.t202511-n.icu, port: 35812, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇹🇷[TR]01', type: anytls, server: tr01a.t202511-n.icu, port: 35811, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇦🇺[AU]01', type: anytls, server: au01a.t202511-n.icu, port: 35813, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇻🇳[VN]01', type: anytls, server: vn01a.t202511-n.icu, port: 35814, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇳🇬[NG]01', type: anytls, server: ng01a.t202511-n.icu, port: 35815, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇦🇷[AR]01', type: anytls, server: ar01a.t202511-n.icu, port: 35816, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: 'LeonINC监管🇲🇰[MK]01', type: anytls, server: mk01a.t202511-n.icu, port: 35817, password: a313f9b5-c9ea-4953-abf2-a3453c01edb6, client-fingerprint: chrome, udp: true, alpn: [h2, http/1.1], sni: '', skip-cert-verify: false }
+    - { name: '[境外用户专用]GPT01', type: vless, server: hw01v.t11-a.app, port: 19279, uuid: a313f9b5-c9ea-4953-abf2-a3453c01edb6, udp: true, flow: xtls-rprx-vision, tls: true, skip-cert-verify: false, client-fingerprint: chrome, servername: www.cloudflare.com, reality-opts: { public-key: 8_fdD3bAbJaIW_MAVe0bR3t6WrtXUnJc12m9KO03fzI, short-id: 78e9a0e9 } }
+proxy-groups:
+    - { name: LeonINC监管, type: select, proxies: [自动选择, 故障转移, '🇭🇰[HK]', '🇸🇬[SG]', '🇯🇵[JP]', '🇺🇸[US]', '🇹🇼[TW]', '🇫🇷[FR]', '🇬🇧[UK]', '🇩🇪[DE]', '🇰🇷[KR]', '🇨🇦[CA]', '🇳🇱[NL]', '🇷🇺[RU]', '🇮🇳[IN]', '🇹🇷[TR]', '🇦🇺[AU]', '🇻🇳[VN]', '🇳🇬[NG]', '🇦🇷[AR]', '🇲🇰[MK]', '剩余流量：128 GB', '套餐到期：2026-07-04', 'LeonINC监管🇭🇰[HK]01', 'LeonINC监管🇭🇰[HK]02', 'LeonINC监管🇭🇰[HK]03', 'LeonINC监管🇭🇰[HK]04', 'LeonINC监管🇭🇰[HK]05', 'LeonINC监管🇭🇰[HK]06', 'LeonINC监管🇭🇰[HK]07', 'LeonINC监管🇭🇰[HK]08', 'LeonINC监管🇭🇰[HK]09', 'LeonINC监管🇭🇰[HK]10', 'LeonINC监管🇭🇰[HK]11', 'LeonINC监管🇭🇰[HK]12', 'LeonINC监管🇭🇰[HK]13', 'LeonINC监管🇭🇰[HK]14', 'LeonINC监管🇭🇰[HK]15', 'LeonINC监管🇭🇰[HK]16', 'LeonINC监管🇭🇰[HK]17', 'LeonINC监管🇭🇰[HK]18', 'LeonINC监管🇭🇰[HK]19', 'LeonINC监管🇭🇰[HK]20', 'LeonINC监管🇸🇬[SG]01', 'LeonINC监管🇸🇬[SG]02', 'LeonINC监管🇸🇬[SG]03', 'LeonINC监管🇸🇬[SG]04', 'LeonINC监管🇸🇬[SG]05', 'LeonINC监管🇸🇬[SG]06', 'LeonINC监管🇸🇬[SG]07', 'LeonINC监管🇸🇬[SG]08', 'LeonINC监管🇸🇬[SG]09', 'LeonINC监管🇸🇬[SG]10', 'LeonINC监管🇸🇬[SG]11', 'LeonINC监管🇸🇬[SG]12', 'LeonINC监管🇸🇬[SG]13', 'LeonINC监管🇸🇬[SG]14', 'LeonINC监管🇸🇬[SG]15', 'LeonINC监管🇯🇵[JP]01', 'LeonINC监管🇯🇵[JP]02', 'LeonINC监管🇯🇵[JP]03', 'LeonINC监管🇯🇵[JP]04', 'LeonINC监管🇯🇵[JP]05', 'LeonINC监管🇯🇵[JP]06', 'LeonINC监管🇯🇵[JP]07', 'LeonINC监管🇯🇵[JP]08', 'LeonINC监管🇯🇵[JP]09', 'LeonINC监管🇯🇵[JP]10', 'LeonINC监管🇺🇸[US]01', 'LeonINC监管🇺🇸[US]02', 'LeonINC监管🇺🇸[US]03', 'LeonINC监管🇺🇸[US]04', 'LeonINC监管🇺🇸[US]05', 'LeonINC监管🇺🇸[US]06', 'LeonINC监管🇺🇸[US]07', 'LeonINC监管🇺🇸[US]08', 'LeonINC监管🇺🇸[US]09', 'LeonINC监管🇺🇸[US]10', 'LeonINC监管🇺🇸[US]11', 'LeonINC监管🇺🇸[US]12', 'LeonINC监管🇹🇼[TW]01', 'LeonINC监管🇹🇼[TW]02', 'LeonINC监管🇹🇼[TW]03', 'LeonINC监管🇹🇼[TW]04', 'LeonINC监管🇹🇼[TW]05', 'LeonINC监管🇹🇼[TW]06', 'LeonINC监管🇫🇷[FR]01', 'LeonINC监管🇫🇷[FR]02', 'LeonINC监管🇬🇧[UK]01', 'LeonINC监管🇬🇧[UK]02', 'LeonINC监管🇩🇪[DE]01', 'LeonINC监管🇩🇪[DE]02', 'LeonINC监管🇰🇷[KR]01', 'LeonINC监管🇨🇦[CA]01', 'LeonINC监管🇳🇱[NL]01', 'LeonINC监管🇷🇺[RU]01', 'LeonINC监管🇮🇳[IN]01', 'LeonINC监管🇹🇷[TR]01', 'LeonINC监管🇦🇺[AU]01', 'LeonINC监管🇻🇳[VN]01', 'LeonINC监管🇳🇬[NG]01', 'LeonINC监管🇦🇷[AR]01', 'LeonINC监管🇲🇰[MK]01', '[境外用户专用]GPT01'] }
+    - { name: 自动选择, type: url-test, proxies: ['剩余流量：128 GB', '套餐到期：2026-07-04', 'LeonINC监管🇭🇰[HK]01', 'LeonINC监管🇭🇰[HK]02', 'LeonINC监管🇭🇰[HK]03', 'LeonINC监管🇭🇰[HK]04', 'LeonINC监管🇭🇰[HK]05', 'LeonINC监管🇭🇰[HK]06', 'LeonINC监管🇭🇰[HK]07', 'LeonINC监管🇭🇰[HK]08', 'LeonINC监管🇭🇰[HK]09', 'LeonINC监管🇭🇰[HK]10', 'LeonINC监管🇭🇰[HK]11', 'LeonINC监管🇭🇰[HK]12', 'LeonINC监管🇭🇰[HK]13', 'LeonINC监管🇭🇰[HK]14', 'LeonINC监管🇭🇰[HK]15', 'LeonINC监管🇭🇰[HK]16', 'LeonINC监管🇭🇰[HK]17', 'LeonINC监管🇭🇰[HK]18', 'LeonINC监管🇭🇰[HK]19', 'LeonINC监管🇭🇰[HK]20', 'LeonINC监管🇸🇬[SG]01', 'LeonINC监管🇸🇬[SG]02', 'LeonINC监管🇸🇬[SG]03', 'LeonINC监管🇸🇬[SG]04', 'LeonINC监管🇸🇬[SG]05', 'LeonINC监管🇸🇬[SG]06', 'LeonINC监管🇸🇬[SG]07', 'LeonINC监管🇸🇬[SG]08', 'LeonINC监管🇸🇬[SG]09', 'LeonINC监管🇸🇬[SG]10', 'LeonINC监管🇸🇬[SG]11', 'LeonINC监管🇸🇬[SG]12', 'LeonINC监管🇸🇬[SG]13', 'LeonINC监管🇸🇬[SG]14', 'LeonINC监管🇸🇬[SG]15', 'LeonINC监管🇯🇵[JP]01', 'LeonINC监管🇯🇵[JP]02', 'LeonINC监管🇯🇵[JP]03', 'LeonINC监管🇯🇵[JP]04', 'LeonINC监管🇯🇵[JP]05', 'LeonINC监管🇯🇵[JP]06', 'LeonINC监管🇯🇵[JP]07', 'LeonINC监管🇯🇵[JP]08', 'LeonINC监管🇯🇵[JP]09', 'LeonINC监管🇯🇵[JP]10', 'LeonINC监管🇺🇸[US]01', 'LeonINC监管🇺🇸[US]02', 'LeonINC监管🇺🇸[US]03', 'LeonINC监管🇺🇸[US]04', 'LeonINC监管🇺🇸[US]05', 'LeonINC监管🇺🇸[US]06', 'LeonINC监管🇺🇸[US]07', 'LeonINC监管🇺🇸[US]08', 'LeonINC监管🇺🇸[US]09', 'LeonINC监管🇺🇸[US]10', 'LeonINC监管🇺🇸[US]11', 'LeonINC监管🇺🇸[US]12', 'LeonINC监管🇹🇼[TW]01', 'LeonINC监管🇹🇼[TW]02', 'LeonINC监管🇹🇼[TW]03', 'LeonINC监管🇹🇼[TW]04', 'LeonINC监管🇹🇼[TW]05', 'LeonINC监管🇹🇼[TW]06', 'LeonINC监管🇫🇷[FR]01', 'LeonINC监管🇫🇷[FR]02', 'LeonINC监管🇬🇧[UK]01', 'LeonINC监管🇬🇧[UK]02', 'LeonINC监管🇩🇪[DE]01', 'LeonINC监管🇩🇪[DE]02', 'LeonINC监管🇰🇷[KR]01', 'LeonINC监管🇨🇦[CA]01', 'LeonINC监管🇳🇱[NL]01', 'LeonINC监管🇷🇺[RU]01', 'LeonINC监管🇮🇳[IN]01', 'LeonINC监管🇹🇷[TR]01', 'LeonINC监管🇦🇺[AU]01', 'LeonINC监管🇻🇳[VN]01', 'LeonINC监管🇳🇬[NG]01', 'LeonINC监管🇦🇷[AR]01', 'LeonINC监管🇲🇰[MK]01', '[境外用户专用]GPT01'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: ['剩余流量：128 GB', '套餐到期：2026-07-04', 'LeonINC监管🇭🇰[HK]01', 'LeonINC监管🇭🇰[HK]02', 'LeonINC监管🇭🇰[HK]03', 'LeonINC监管🇭🇰[HK]04', 'LeonINC监管🇭🇰[HK]05', 'LeonINC监管🇭🇰[HK]06', 'LeonINC监管🇭🇰[HK]07', 'LeonINC监管🇭🇰[HK]08', 'LeonINC监管🇭🇰[HK]09', 'LeonINC监管🇭🇰[HK]10', 'LeonINC监管🇭🇰[HK]11', 'LeonINC监管🇭🇰[HK]12', 'LeonINC监管🇭🇰[HK]13', 'LeonINC监管🇭🇰[HK]14', 'LeonINC监管🇭🇰[HK]15', 'LeonINC监管🇭🇰[HK]16', 'LeonINC监管🇭🇰[HK]17', 'LeonINC监管🇭🇰[HK]18', 'LeonINC监管🇭🇰[HK]19', 'LeonINC监管🇭🇰[HK]20', 'LeonINC监管🇸🇬[SG]01', 'LeonINC监管🇸🇬[SG]02', 'LeonINC监管🇸🇬[SG]03', 'LeonINC监管🇸🇬[SG]04', 'LeonINC监管🇸🇬[SG]05', 'LeonINC监管🇸🇬[SG]06', 'LeonINC监管🇸🇬[SG]07', 'LeonINC监管🇸🇬[SG]08', 'LeonINC监管🇸🇬[SG]09', 'LeonINC监管🇸🇬[SG]10', 'LeonINC监管🇸🇬[SG]11', 'LeonINC监管🇸🇬[SG]12', 'LeonINC监管🇸🇬[SG]13', 'LeonINC监管🇸🇬[SG]14', 'LeonINC监管🇸🇬[SG]15', 'LeonINC监管🇯🇵[JP]01', 'LeonINC监管🇯🇵[JP]02', 'LeonINC监管🇯🇵[JP]03', 'LeonINC监管🇯🇵[JP]04', 'LeonINC监管🇯🇵[JP]05', 'LeonINC监管🇯🇵[JP]06', 'LeonINC监管🇯🇵[JP]07', 'LeonINC监管🇯🇵[JP]08', 'LeonINC监管🇯🇵[JP]09', 'LeonINC监管🇯🇵[JP]10', 'LeonINC监管🇺🇸[US]01', 'LeonINC监管🇺🇸[US]02', 'LeonINC监管🇺🇸[US]03', 'LeonINC监管🇺🇸[US]04', 'LeonINC监管🇺🇸[US]05', 'LeonINC监管🇺🇸[US]06', 'LeonINC监管🇺🇸[US]07', 'LeonINC监管🇺🇸[US]08', 'LeonINC监管🇺🇸[US]09', 'LeonINC监管🇺🇸[US]10', 'LeonINC监管🇺🇸[US]11', 'LeonINC监管🇺🇸[US]12', 'LeonINC监管🇹🇼[TW]01', 'LeonINC监管🇹🇼[TW]02', 'LeonINC监管🇹🇼[TW]03', 'LeonINC监管🇹🇼[TW]04', 'LeonINC监管🇹🇼[TW]05', 'LeonINC监管🇹🇼[TW]06', 'LeonINC监管🇫🇷[FR]01', 'LeonINC监管🇫🇷[FR]02', 'LeonINC监管🇬🇧[UK]01', 'LeonINC监管🇬🇧[UK]02', 'LeonINC监管🇩🇪[DE]01', 'LeonINC监管🇩🇪[DE]02', 'LeonINC监管🇰🇷[KR]01', 'LeonINC监管🇨🇦[CA]01', 'LeonINC监管🇳🇱[NL]01', 'LeonINC监管🇷🇺[RU]01', 'LeonINC监管🇮🇳[IN]01', 'LeonINC监管🇹🇷[TR]01', 'LeonINC监管🇦🇺[AU]01', 'LeonINC监管🇻🇳[VN]01', 'LeonINC监管🇳🇬[NG]01', 'LeonINC监管🇦🇷[AR]01', 'LeonINC监管🇲🇰[MK]01', '[境外用户专用]GPT01'], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: '🇭🇰[HK]', type: select, proxies: ['LeonINC监管🇭🇰[HK]01', 'LeonINC监管🇭🇰[HK]02', 'LeonINC监管🇭🇰[HK]03', 'LeonINC监管🇭🇰[HK]04', 'LeonINC监管🇭🇰[HK]05', 'LeonINC监管🇭🇰[HK]06', 'LeonINC监管🇭🇰[HK]07', 'LeonINC监管🇭🇰[HK]08', 'LeonINC监管🇭🇰[HK]09', 'LeonINC监管🇭🇰[HK]10', 'LeonINC监管🇭🇰[HK]11', 'LeonINC监管🇭🇰[HK]12', 'LeonINC监管🇭🇰[HK]13', 'LeonINC监管🇭🇰[HK]14', 'LeonINC监管🇭🇰[HK]15', 'LeonINC监管🇭🇰[HK]16', 'LeonINC监管🇭🇰[HK]17', 'LeonINC监管🇭🇰[HK]18', 'LeonINC监管🇭🇰[HK]19', 'LeonINC监管🇭🇰[HK]20'] }
+    - { name: '🇸🇬[SG]', type: select, proxies: ['LeonINC监管🇸🇬[SG]01', 'LeonINC监管🇸🇬[SG]02', 'LeonINC监管🇸🇬[SG]03', 'LeonINC监管🇸🇬[SG]04', 'LeonINC监管🇸🇬[SG]05', 'LeonINC监管🇸🇬[SG]06', 'LeonINC监管🇸🇬[SG]07', 'LeonINC监管🇸🇬[SG]08', 'LeonINC监管🇸🇬[SG]09', 'LeonINC监管🇸🇬[SG]10', 'LeonINC监管🇸🇬[SG]11', 'LeonINC监管🇸🇬[SG]12', 'LeonINC监管🇸🇬[SG]13', 'LeonINC监管🇸🇬[SG]14', 'LeonINC监管🇸🇬[SG]15'] }
+    - { name: '🇯🇵[JP]', type: select, proxies: ['LeonINC监管🇯🇵[JP]01', 'LeonINC监管🇯🇵[JP]02', 'LeonINC监管🇯🇵[JP]03', 'LeonINC监管🇯🇵[JP]04', 'LeonINC监管🇯🇵[JP]05', 'LeonINC监管🇯🇵[JP]06', 'LeonINC监管🇯🇵[JP]07', 'LeonINC监管🇯🇵[JP]08', 'LeonINC监管🇯🇵[JP]09', 'LeonINC监管🇯🇵[JP]10'] }
+    - { name: '🇺🇸[US]', type: select, proxies: ['LeonINC监管🇺🇸[US]01', 'LeonINC监管🇺🇸[US]02', 'LeonINC监管🇺🇸[US]03', 'LeonINC监管🇺🇸[US]04', 'LeonINC监管🇺🇸[US]05', 'LeonINC监管🇺🇸[US]06', 'LeonINC监管🇺🇸[US]07', 'LeonINC监管🇺🇸[US]08', 'LeonINC监管🇺🇸[US]09', 'LeonINC监管🇺🇸[US]10', 'LeonINC监管🇺🇸[US]11', 'LeonINC监管🇺🇸[US]12'] }
+    - { name: '🇹🇼[TW]', type: select, proxies: ['LeonINC监管🇹🇼[TW]01', 'LeonINC监管🇹🇼[TW]02', 'LeonINC监管🇹🇼[TW]03', 'LeonINC监管🇹🇼[TW]04', 'LeonINC监管🇹🇼[TW]05', 'LeonINC监管🇹🇼[TW]06'] }
+    - { name: '🇫🇷[FR]', type: select, proxies: ['LeonINC监管🇫🇷[FR]01', 'LeonINC监管🇫🇷[FR]02'] }
+    - { name: '🇬🇧[UK]', type: select, proxies: ['LeonINC监管🇬🇧[UK]01', 'LeonINC监管🇬🇧[UK]02'] }
+    - { name: '🇩🇪[DE]', type: select, proxies: ['LeonINC监管🇩🇪[DE]01', 'LeonINC监管🇩🇪[DE]02'] }
+    - { name: '🇰🇷[KR]', type: select, proxies: ['LeonINC监管🇰🇷[KR]01'] }
+    - { name: '🇨🇦[CA]', type: select, proxies: ['LeonINC监管🇨🇦[CA]01'] }
+    - { name: '🇳🇱[NL]', type: select, proxies: ['LeonINC监管🇳🇱[NL]01'] }
+    - { name: '🇷🇺[RU]', type: select, proxies: ['LeonINC监管🇷🇺[RU]01'] }
+    - { name: '🇮🇳[IN]', type: select, proxies: ['LeonINC监管🇮🇳[IN]01'] }
+    - { name: '🇹🇷[TR]', type: select, proxies: ['LeonINC监管🇹🇷[TR]01'] }
+    - { name: '🇦🇺[AU]', type: select, proxies: ['LeonINC监管🇦🇺[AU]01'] }
+    - { name: '🇻🇳[VN]', type: select, proxies: ['LeonINC监管🇻🇳[VN]01'] }
+    - { name: '🇳🇬[NG]', type: select, proxies: ['LeonINC监管🇳🇬[NG]01'] }
+    - { name: '🇦🇷[AR]', type: select, proxies: ['LeonINC监管🇦🇷[AR]01'] }
+    - { name: '🇲🇰[MK]', type: select, proxies: ['LeonINC监管🇲🇰[MK]01'] }
+    - { name: 其他节点, type: select, proxies: ['剩余流量：128 GB', '套餐到期：2026-07-04', '[境外用户专用]GPT01'] }
+rules:
+    - 'DOMAIN,www.cloudflarework.com,DIRECT'
+    - 'DOMAIN-SUFFIX,services.googleapis.cn,LeonINC监管'
+    - 'DOMAIN-SUFFIX,xn--ngstr-lra8j.com,LeonINC监管'
+    - 'DOMAIN,safebrowsing.urlsec.qq.com,DIRECT'
+    - 'DOMAIN,safebrowsing.googleapis.com,DIRECT'
+    - 'DOMAIN,developer.apple.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,digicert.com,LeonINC监管'
+    - 'DOMAIN,ocsp.apple.com,LeonINC监管'
+    - 'DOMAIN,ocsp.comodoca.com,LeonINC监管'
+    - 'DOMAIN,ocsp.usertrust.com,LeonINC监管'
+    - 'DOMAIN,ocsp.sectigo.com,LeonINC监管'
+    - 'DOMAIN,ocsp.verisign.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,apple-dns.net,LeonINC监管'
+    - 'DOMAIN,testflight.apple.com,LeonINC监管'
+    - 'DOMAIN,sandbox.itunes.apple.com,LeonINC监管'
+    - 'DOMAIN,itunes.apple.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,apps.apple.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,blobstore.apple.com,LeonINC监管'
+    - 'DOMAIN,cvws.icloud-content.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,mzstatic.com,DIRECT'
+    - 'DOMAIN-SUFFIX,itunes.apple.com,DIRECT'
+    - 'DOMAIN-SUFFIX,icloud.com,DIRECT'
+    - 'DOMAIN-SUFFIX,icloud-content.com,DIRECT'
+    - 'DOMAIN-SUFFIX,me.com,DIRECT'
+    - 'DOMAIN-SUFFIX,aaplimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,cdn20.com,DIRECT'
+    - 'DOMAIN-SUFFIX,cdn-apple.com,DIRECT'
+    - 'DOMAIN-SUFFIX,akadns.net,DIRECT'
+    - 'DOMAIN-SUFFIX,akamaiedge.net,DIRECT'
+    - 'DOMAIN-SUFFIX,edgekey.net,DIRECT'
+    - 'DOMAIN-SUFFIX,mwcloudcdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,mwcname.com,DIRECT'
+    - 'DOMAIN-SUFFIX,apple.com,DIRECT'
+    - 'DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT'
+    - 'DOMAIN-SUFFIX,apple-mapkit.com,DIRECT'
+    - 'DOMAIN-SUFFIX,126.com,DIRECT'
+    - 'DOMAIN-SUFFIX,126.net,DIRECT'
+    - 'DOMAIN-SUFFIX,127.net,DIRECT'
+    - 'DOMAIN-SUFFIX,163.com,DIRECT'
+    - 'DOMAIN-SUFFIX,360buyimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,36kr.com,DIRECT'
+    - 'DOMAIN-SUFFIX,acfun.tv,DIRECT'
+    - 'DOMAIN-SUFFIX,air-matters.com,DIRECT'
+    - 'DOMAIN-SUFFIX,aixifan.com,DIRECT'
+    - 'DOMAIN-KEYWORD,alicdn,DIRECT'
+    - 'DOMAIN-KEYWORD,alipay,DIRECT'
+    - 'DOMAIN-KEYWORD,taobao,DIRECT'
+    - 'DOMAIN-SUFFIX,amap.com,DIRECT'
+    - 'DOMAIN-SUFFIX,autonavi.com,DIRECT'
+    - 'DOMAIN-KEYWORD,baidu,DIRECT'
+    - 'DOMAIN-SUFFIX,bdimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,bdstatic.com,DIRECT'
+    - 'DOMAIN-SUFFIX,bilibili.com,DIRECT'
+    - 'DOMAIN-SUFFIX,bilivideo.com,DIRECT'
+    - 'DOMAIN-SUFFIX,caiyunapp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,clouddn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,cnbeta.com,DIRECT'
+    - 'DOMAIN-SUFFIX,cnbetacdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,cootekservice.com,DIRECT'
+    - 'DOMAIN-SUFFIX,csdn.net,DIRECT'
+    - 'DOMAIN-SUFFIX,ctrip.com,DIRECT'
+    - 'DOMAIN-SUFFIX,dgtle.com,DIRECT'
+    - 'DOMAIN-SUFFIX,dianping.com,DIRECT'
+    - 'DOMAIN-SUFFIX,douban.com,DIRECT'
+    - 'DOMAIN-SUFFIX,doubanio.com,DIRECT'
+    - 'DOMAIN-SUFFIX,duokan.com,DIRECT'
+    - 'DOMAIN-SUFFIX,easou.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ele.me,DIRECT'
+    - 'DOMAIN-SUFFIX,feng.com,DIRECT'
+    - 'DOMAIN-SUFFIX,fir.im,DIRECT'
+    - 'DOMAIN-SUFFIX,frdic.com,DIRECT'
+    - 'DOMAIN-SUFFIX,g-cores.com,DIRECT'
+    - 'DOMAIN-SUFFIX,godic.net,DIRECT'
+    - 'DOMAIN-SUFFIX,gtimg.com,DIRECT'
+    - 'DOMAIN,cdn.hockeyapp.net,DIRECT'
+    - 'DOMAIN-SUFFIX,hongxiu.com,DIRECT'
+    - 'DOMAIN-SUFFIX,hxcdn.net,DIRECT'
+    - 'DOMAIN-SUFFIX,iciba.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ifeng.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ifengimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ipip.net,DIRECT'
+    - 'DOMAIN-SUFFIX,iqiyi.com,DIRECT'
+    - 'DOMAIN-SUFFIX,jd.com,DIRECT'
+    - 'DOMAIN-SUFFIX,jianshu.com,DIRECT'
+    - 'DOMAIN-SUFFIX,knewone.com,DIRECT'
+    - 'DOMAIN-SUFFIX,le.com,DIRECT'
+    - 'DOMAIN-SUFFIX,lecloud.com,DIRECT'
+    - 'DOMAIN-SUFFIX,lemicp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,licdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,luoo.net,DIRECT'
+    - 'DOMAIN-SUFFIX,meituan.com,DIRECT'
+    - 'DOMAIN-SUFFIX,meituan.net,DIRECT'
+    - 'DOMAIN-SUFFIX,mi.com,DIRECT'
+    - 'DOMAIN-SUFFIX,miaopai.com,DIRECT'
+    - 'DOMAIN-SUFFIX,microsoft.com,DIRECT'
+    - 'DOMAIN-SUFFIX,microsoftonline.com,DIRECT'
+    - 'DOMAIN-SUFFIX,miui.com,DIRECT'
+    - 'DOMAIN-SUFFIX,miwifi.com,DIRECT'
+    - 'DOMAIN-SUFFIX,mob.com,DIRECT'
+    - 'DOMAIN-SUFFIX,netease.com,DIRECT'
+    - 'DOMAIN-SUFFIX,office.com,DIRECT'
+    - 'DOMAIN-SUFFIX,office365.com,DIRECT'
+    - 'DOMAIN-KEYWORD,officecdn,DIRECT'
+    - 'DOMAIN-SUFFIX,oschina.net,DIRECT'
+    - 'DOMAIN-SUFFIX,ppsimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,pstatp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qcloud.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qdaily.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qdmm.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qhimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qhres.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qidian.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qihucdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qiniu.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qiniucdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qiyipic.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qq.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qqurl.com,DIRECT'
+    - 'DOMAIN-SUFFIX,rarbg.to,DIRECT'
+    - 'DOMAIN-SUFFIX,ruguoapp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,segmentfault.com,DIRECT'
+    - 'DOMAIN-SUFFIX,sinaapp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,smzdm.com,DIRECT'
+    - 'DOMAIN-SUFFIX,snapdrop.net,DIRECT'
+    - 'DOMAIN-SUFFIX,sogou.com,DIRECT'
+    - 'DOMAIN-SUFFIX,sogoucdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,sohu.com,DIRECT'
+    - 'DOMAIN-SUFFIX,soku.com,DIRECT'
+    - 'DOMAIN-SUFFIX,speedtest.net,DIRECT'
+    - 'DOMAIN-SUFFIX,sspai.com,DIRECT'
+    - 'DOMAIN-SUFFIX,suning.com,DIRECT'
+    - 'DOMAIN-SUFFIX,taobao.com,DIRECT'
+    - 'DOMAIN-SUFFIX,tencent.com,DIRECT'
+    - 'DOMAIN-SUFFIX,tenpay.com,DIRECT'
+    - 'DOMAIN-SUFFIX,tianyancha.com,DIRECT'
+    - 'DOMAIN-SUFFIX,tmall.com,DIRECT'
+    - 'DOMAIN-SUFFIX,tudou.com,DIRECT'
+    - 'DOMAIN-SUFFIX,umetrip.com,DIRECT'
+    - 'DOMAIN-SUFFIX,upaiyun.com,DIRECT'
+    - 'DOMAIN-SUFFIX,upyun.com,DIRECT'
+    - 'DOMAIN-SUFFIX,veryzhun.com,DIRECT'
+    - 'DOMAIN-SUFFIX,weather.com,DIRECT'
+    - 'DOMAIN-SUFFIX,weibo.com,DIRECT'
+    - 'DOMAIN-SUFFIX,xiami.com,DIRECT'
+    - 'DOMAIN-SUFFIX,xiami.net,DIRECT'
+    - 'DOMAIN-SUFFIX,xiaomicp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ximalaya.com,DIRECT'
+    - 'DOMAIN-SUFFIX,xmcdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,xunlei.com,DIRECT'
+    - 'DOMAIN-SUFFIX,yhd.com,DIRECT'
+    - 'DOMAIN-SUFFIX,yihaodianimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,yinxiang.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ykimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,youdao.com,DIRECT'
+    - 'DOMAIN-SUFFIX,youku.com,DIRECT'
+    - 'DOMAIN-SUFFIX,zealer.com,DIRECT'
+    - 'DOMAIN-SUFFIX,zhihu.com,DIRECT'
+    - 'DOMAIN-SUFFIX,zhimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,zimuzu.tv,DIRECT'
+    - 'DOMAIN-SUFFIX,zoho.com,DIRECT'
+    - 'DOMAIN-KEYWORD,amazon,LeonINC监管'
+    - 'DOMAIN-KEYWORD,google,LeonINC监管'
+    - 'DOMAIN-KEYWORD,gmail,LeonINC监管'
+    - 'DOMAIN-KEYWORD,youtube,LeonINC监管'
+    - 'DOMAIN-KEYWORD,facebook,LeonINC监管'
+    - 'DOMAIN-SUFFIX,fb.me,LeonINC监管'
+    - 'DOMAIN-SUFFIX,fbcdn.net,LeonINC监管'
+    - 'DOMAIN-KEYWORD,twitter,LeonINC监管'
+    - 'DOMAIN-KEYWORD,instagram,LeonINC监管'
+    - 'DOMAIN-KEYWORD,dropbox,LeonINC监管'
+    - 'DOMAIN-SUFFIX,twimg.com,LeonINC监管'
+    - 'DOMAIN-KEYWORD,blogspot,LeonINC监管'
+    - 'DOMAIN-SUFFIX,youtu.be,LeonINC监管'
+    - 'DOMAIN-KEYWORD,whatsapp,LeonINC监管'
+    - 'DOMAIN-SUFFIX,9to5mac.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,abpchina.org,LeonINC监管'
+    - 'DOMAIN-SUFFIX,adblockplus.org,LeonINC监管'
+    - 'DOMAIN-SUFFIX,adobe.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,akamaized.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,alfredapp.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,amplitude.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,ampproject.org,LeonINC监管'
+    - 'DOMAIN-SUFFIX,android.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,angularjs.org,LeonINC监管'
+    - 'DOMAIN-SUFFIX,aolcdn.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,apkpure.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,appledaily.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,appshopper.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,appspot.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,arcgis.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,archive.org,LeonINC监管'
+    - 'DOMAIN-SUFFIX,armorgames.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,aspnetcdn.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,att.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,awsstatic.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,azureedge.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,azurewebsites.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,bing.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,bintray.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,bit.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,bit.ly,LeonINC监管'
+    - 'DOMAIN-SUFFIX,bitbucket.org,LeonINC监管'
+    - 'DOMAIN-SUFFIX,bjango.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,bkrtx.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,blog.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,blogcdn.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,blogger.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,blogsmithmedia.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,blogspot.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,blogspot.hk,LeonINC监管'
+    - 'DOMAIN-SUFFIX,bloomberg.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,box.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,box.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,cachefly.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,chromium.org,LeonINC监管'
+    - 'DOMAIN-SUFFIX,cl.ly,LeonINC监管'
+    - 'DOMAIN-SUFFIX,cloudflare.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,cloudfront.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,cloudmagic.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,cmail19.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,cnet.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,cocoapods.org,LeonINC监管'
+    - 'DOMAIN-SUFFIX,comodoca.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,crashlytics.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,culturedcode.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,d.pr,LeonINC监管'
+    - 'DOMAIN-SUFFIX,danilo.to,LeonINC监管'
+    - 'DOMAIN-SUFFIX,dayone.me,LeonINC监管'
+    - 'DOMAIN-SUFFIX,db.tt,LeonINC监管'
+    - 'DOMAIN-SUFFIX,deskconnect.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,disq.us,LeonINC监管'
+    - 'DOMAIN-SUFFIX,disqus.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,disquscdn.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,dnsimple.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,docker.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,dribbble.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,droplr.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,duckduckgo.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,dueapp.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,dytt8.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,edgecastcdn.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,edgekey.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,edgesuite.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,engadget.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,entrust.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,eurekavpt.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,evernote.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,fabric.io,LeonINC监管'
+    - 'DOMAIN-SUFFIX,fast.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,fastly.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,fc2.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,feedburner.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,feedly.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,feedsportal.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,fiftythree.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,firebaseio.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,flexibits.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,flickr.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,flipboard.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,g.co,LeonINC监管'
+    - 'DOMAIN-SUFFIX,gabia.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,geni.us,LeonINC监管'
+    - 'DOMAIN-SUFFIX,gfx.ms,LeonINC监管'
+    - 'DOMAIN-SUFFIX,ggpht.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,ghostnoteapp.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,git.io,LeonINC监管'
+    - 'DOMAIN-KEYWORD,github,LeonINC监管'
+    - 'DOMAIN-SUFFIX,globalsign.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,gmodules.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,godaddy.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,golang.org,LeonINC监管'
+    - 'DOMAIN-SUFFIX,gongm.in,LeonINC监管'
+    - 'DOMAIN-SUFFIX,goo.gl,LeonINC监管'
+    - 'DOMAIN-SUFFIX,goodreaders.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,goodreads.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,gravatar.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,gstatic.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,gvt0.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,hockeyapp.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,hotmail.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,icons8.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,ifixit.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,ift.tt,LeonINC监管'
+    - 'DOMAIN-SUFFIX,ifttt.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,iherb.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,imageshack.us,LeonINC监管'
+    - 'DOMAIN-SUFFIX,img.ly,LeonINC监管'
+    - 'DOMAIN-SUFFIX,imgur.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,imore.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,instapaper.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,ipn.li,LeonINC监管'
+    - 'DOMAIN-SUFFIX,is.gd,LeonINC监管'
+    - 'DOMAIN-SUFFIX,issuu.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,itgonglun.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,itun.es,LeonINC监管'
+    - 'DOMAIN-SUFFIX,ixquick.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,j.mp,LeonINC监管'
+    - 'DOMAIN-SUFFIX,js.revsci.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,jshint.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,jtvnw.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,justgetflux.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,kat.cr,LeonINC监管'
+    - 'DOMAIN-SUFFIX,klip.me,LeonINC监管'
+    - 'DOMAIN-SUFFIX,libsyn.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,linkedin.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,line-apps.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,linode.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,lithium.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,littlehj.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,live.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,live.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,livefilestore.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,llnwd.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,macid.co,LeonINC监管'
+    - 'DOMAIN-SUFFIX,macromedia.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,macrumors.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,mashable.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,mathjax.org,LeonINC监管'
+    - 'DOMAIN-SUFFIX,medium.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,mega.co.nz,LeonINC监管'
+    - 'DOMAIN-SUFFIX,mega.nz,LeonINC监管'
+    - 'DOMAIN-SUFFIX,megaupload.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,microsofttranslator.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,mindnode.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,mobile01.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,modmyi.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,msedge.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,myfontastic.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,name.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,nextmedia.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,nsstatic.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,nssurge.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,nyt.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,nytimes.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,omnigroup.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,onedrive.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,onenote.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,ooyala.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,openvpn.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,openwrt.org,LeonINC监管'
+    - 'DOMAIN-SUFFIX,orkut.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,osxdaily.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,outlook.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,ow.ly,LeonINC监管'
+    - 'DOMAIN-SUFFIX,paddleapi.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,parallels.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,parse.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,pdfexpert.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,periscope.tv,LeonINC监管'
+    - 'DOMAIN-SUFFIX,pinboard.in,LeonINC监管'
+    - 'DOMAIN-SUFFIX,pinterest.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,pixelmator.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,pixiv.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,playpcesor.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,playstation.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,playstation.com.hk,LeonINC监管'
+    - 'DOMAIN-SUFFIX,playstation.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,playstationnetwork.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,pushwoosh.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,rime.im,LeonINC监管'
+    - 'DOMAIN-SUFFIX,servebom.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,sfx.ms,LeonINC监管'
+    - 'DOMAIN-SUFFIX,shadowsocks.org,LeonINC监管'
+    - 'DOMAIN-SUFFIX,sharethis.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,shazam.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,skype.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,smartdnsLeonINC监管.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,smartmailcloud.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,sndcdn.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,sony.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,soundcloud.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,sourceforge.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,spotify.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,squarespace.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,sstatic.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,st.luluku.pw,LeonINC监管'
+    - 'DOMAIN-SUFFIX,stackoverflow.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,startpage.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,staticflickr.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,steamcommunity.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,symauth.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,symcb.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,symcd.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,tapbots.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,tapbots.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,tdesktop.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,techcrunch.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,techsmith.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,thepiratebay.org,LeonINC监管'
+    - 'DOMAIN-SUFFIX,theverge.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,time.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,timeinc.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,tiny.cc,LeonINC监管'
+    - 'DOMAIN-SUFFIX,tinypic.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,tmblr.co,LeonINC监管'
+    - 'DOMAIN-SUFFIX,todoist.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,trello.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,trustasiassl.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,tumblr.co,LeonINC监管'
+    - 'DOMAIN-SUFFIX,tumblr.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,tweetdeck.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,tweetmarker.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,twitch.tv,LeonINC监管'
+    - 'DOMAIN-SUFFIX,txmblr.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,typekit.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,ubertags.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,ublock.org,LeonINC监管'
+    - 'DOMAIN-SUFFIX,ubnt.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,ulyssesapp.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,urchin.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,usertrust.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,v.gd,LeonINC监管'
+    - 'DOMAIN-SUFFIX,v2ex.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,vimeo.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,vimeocdn.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,vine.co,LeonINC监管'
+    - 'DOMAIN-SUFFIX,vivaldi.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,vox-cdn.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,vsco.co,LeonINC监管'
+    - 'DOMAIN-SUFFIX,vultr.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,w.org,LeonINC监管'
+    - 'DOMAIN-SUFFIX,w3schools.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,webtype.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,wikiwand.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,wikileaks.org,LeonINC监管'
+    - 'DOMAIN-SUFFIX,wikimedia.org,LeonINC监管'
+    - 'DOMAIN-SUFFIX,wikipedia.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,wikipedia.org,LeonINC监管'
+    - 'DOMAIN-SUFFIX,windows.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,windows.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,wire.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,wordpress.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,workflowy.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,wp.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,wsj.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,wsj.net,LeonINC监管'
+    - 'DOMAIN-SUFFIX,xda-developers.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,xeeno.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,xiti.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,yahoo.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,yimg.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,ying.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,yoyo.org,LeonINC监管'
+    - 'DOMAIN-SUFFIX,ytimg.com,LeonINC监管'
+    - 'DOMAIN-SUFFIX,telegra.ph,LeonINC监管'
+    - 'DOMAIN-SUFFIX,telegram.org,LeonINC监管'
+    - 'IP-CIDR,91.108.4.0/22,LeonINC监管,no-resolve'
+    - 'IP-CIDR,91.108.8.0/21,LeonINC监管,no-resolve'
+    - 'IP-CIDR,91.108.16.0/22,LeonINC监管,no-resolve'
+    - 'IP-CIDR,91.108.56.0/22,LeonINC监管,no-resolve'
+    - 'IP-CIDR,149.154.160.0/20,LeonINC监管,no-resolve'
+    - 'IP-CIDR6,2001:67c:4e8::/48,LeonINC监管,no-resolve'
+    - 'IP-CIDR6,2001:b28:f23d::/48,LeonINC监管,no-resolve'
+    - 'IP-CIDR6,2001:b28:f23f::/48,LeonINC监管,no-resolve'
+    - 'IP-CIDR,120.232.181.162/32,LeonINC监管,no-resolve'
+    - 'IP-CIDR,120.241.147.226/32,LeonINC监管,no-resolve'
+    - 'IP-CIDR,120.253.253.226/32,LeonINC监管,no-resolve'
+    - 'IP-CIDR,120.253.255.162/32,LeonINC监管,no-resolve'
+    - 'IP-CIDR,120.253.255.34/32,LeonINC监管,no-resolve'
+    - 'IP-CIDR,120.253.255.98/32,LeonINC监管,no-resolve'
+    - 'IP-CIDR,180.163.150.162/32,LeonINC监管,no-resolve'
+    - 'IP-CIDR,180.163.150.34/32,LeonINC监管,no-resolve'
+    - 'IP-CIDR,180.163.151.162/32,LeonINC监管,no-resolve'
+    - 'IP-CIDR,180.163.151.34/32,LeonINC监管,no-resolve'
+    - 'IP-CIDR,203.208.39.0/24,LeonINC监管,no-resolve'
+    - 'IP-CIDR,203.208.40.0/24,LeonINC监管,no-resolve'
+    - 'IP-CIDR,203.208.41.0/24,LeonINC监管,no-resolve'
+    - 'IP-CIDR,203.208.43.0/24,LeonINC监管,no-resolve'
+    - 'IP-CIDR,203.208.50.0/24,LeonINC监管,no-resolve'
+    - 'IP-CIDR,220.181.174.162/32,LeonINC监管,no-resolve'
+    - 'IP-CIDR,220.181.174.226/32,LeonINC监管,no-resolve'
+    - 'IP-CIDR,220.181.174.34/32,LeonINC监管,no-resolve'
+    - 'DOMAIN,injections.adguard.org,DIRECT'
+    - 'DOMAIN,local.adguard.org,DIRECT'
+    - 'DOMAIN-SUFFIX,local,DIRECT'
+    - 'IP-CIDR,127.0.0.0/8,DIRECT'
+    - 'IP-CIDR,172.16.0.0/12,DIRECT'
+    - 'IP-CIDR,192.168.0.0/16,DIRECT'
+    - 'IP-CIDR,10.0.0.0/8,DIRECT'
+    - 'IP-CIDR,17.0.0.0/8,DIRECT'
+    - 'IP-CIDR,100.64.0.0/10,DIRECT'
+    - 'IP-CIDR,224.0.0.0/4,DIRECT'
+    - 'IP-CIDR6,fe80::/10,DIRECT'
+    - 'DOMAIN-SUFFIX,cn,DIRECT'
+    - 'DOMAIN-KEYWORD,-cn,DIRECT'
+    - 'GEOIP,CN,DIRECT'
+    - 'MATCH,LeonINC监管'
