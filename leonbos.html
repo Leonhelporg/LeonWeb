@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LeonBos 项目总结：企业级反指纹浏览器控制台，支持账号资产、指纹模板、代理、会话和集成中心管理。">
+    <meta name="theme-color" content="#f3f6fb">
+    <title>LeonBos - Leon Web 项目</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a href="index.html" class="brand" aria-label="Leon Web 首页">
+                <span class="brand-dot"></span>
+                <span>Leon Web</span>
+            </a>
+            <nav class="nav" aria-label="主导航">
+                <a href="index.html">WORK</a>
+                <a href="index.html#services">STUDIO</a>
+                <a href="xiangmu.html" class="active">ARCHIVE</a>
+                <a href="yonghutiaok.html">TERMS</a>
+                <a href="index.html#contact">CONTACT</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <section class="hero-personal">
+            <div class="hero-main">
+                <p class="kicker">Project Summary</p>
+                <h1>LeonBos enterprise anti-detect browser console.</h1>
+                <p class="lead">LeonBos 1.0.1 是一款企业级反指纹浏览器控制台，面向多账号资产管理、会话控制、配置编排和运营监控场景。</p>
+                <p class="lead">项目同时提供 Web 控制台与 Electron 桌面壳，支持指纹模板、代理配置、浏览器会话管理，并内置 MCP Server 与插件集成中心。</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#features">查看功能</a>
+                    <a class="btn btn-ghost" href="xiangmu.html">返回案例目录</a>
+                </div>
+            </div>
+            <aside class="profile-card">
+                <div>
+                    <p class="profile-title">项目档案</p>
+                    <p>来源：本地 LeonBos 项目 README、package.json 与核心模块。</p>
+                </div>
+                <div class="tag-row">
+                    <span>LeonBos 1.0.1</span>
+                    <span>Node.js</span>
+                    <span>Electron</span>
+                    <span>sql.js</span>
+                    <span>MCP / Plugins</span>
+                </div>
+            </aside>
+        </section>
+
+        <section class="section section-shell" id="features">
+            <div class="section-head">
+                <div><p class="section-label">Core Modules</p><h2>核心能力</h2></div>
+            </div>
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="project-top"><h3>浏览器资产管理</h3><span class="state">Profiles</span></div>
+                    <p>创建、查看、删除和启动浏览器 Profile，记录使用次数、最后使用时间和运行状态。</p>
+                </article>
+                <article class="project-card">
+                    <div class="project-top"><h3>指纹与代理配置</h3><span class="state">Fingerprint</span></div>
+                    <p>支持随机指纹生成、模板复用、User-Agent、屏幕、硬件、WebGL、Canvas、Audio 与 WebRTC 防护配置。</p>
+                </article>
+                <article class="project-card">
+                    <div class="project-top"><h3>Web 与桌面双入口</h3><span class="state">Console</span></div>
+                    <p>通过 Express 提供 Web 控制台，并使用 Electron 桌面壳包装，包含 Windows 图标、托盘和安装包构建配置。</p>
+                </article>
+                <article class="project-card">
+                    <div class="project-top"><h3>集成中心</h3><span class="state">Integrations</span></div>
+                    <p>内置 MCPs & Plugins 管理界面，可登记 stdio / HTTP MCP 信息、插件入口、权限、分类和配置，并支持启停、检测与删除。</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section-shell two-column">
+            <div class="panel">
+                <p class="section-label">Use Cases</p>
+                <h2>适用场景</h2>
+                <ul class="check-list">
+                    <li>多账号环境与浏览器资产统一管理。</li>
+                    <li>指纹模板、代理和运行参数集中编排。</li>
+                    <li>会话启动、关闭、审计记录与状态监控。</li>
+                    <li>后续 MCP Server 与插件能力的注册治理。</li>
+                </ul>
+            </div>
+            <div class="panel">
+                <p class="section-label">Release</p>
+                <h2>发布信息</h2>
+                <p>当前版本为 LeonBos 1.0.1，项目入口包含 Web 控制台、Electron 桌面版与 Windows 安装包构建脚本。</p>
+                <p>README 说明当前集成中心只做安全注册表和治理界面，不直接执行外部 MCP 命令或插件代码，后续可扩展受控运行时、权限确认、日志审计和沙箱执行。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <span>&copy; 2025 Leon Web · LeonBos Project Summary</span>
+            <div class="footer-links">
+                <a href="index.html">首页</a>
+                <a href="xiangmu.html">案例目录</a>
+                <a href="index.html#contact">联系</a>
+            </div>
+        </div>
+    </footer>
+    <script src="site.js"></script>
+</body>
+</html>
